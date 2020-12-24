@@ -6,8 +6,8 @@ backend:
   name: git-gateway
   branch: master
 
-media_folder: static/img
-public_folder: /img
+media_folder: static/files
+public_folder: /files
 
 # Docs: https://www.netlifycms.org/docs/configuration-options/#collections
 collections:
@@ -45,14 +45,14 @@ collections:
     # editor:
     #   preview: true
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Título', name: 'title', widget: 'string' }
+      - { label: 'Data de publicação', name: 'date', widget: 'datetime' }
+      - { label: 'Descrição', name: 'description', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'projects'
     # identifier_field: name
-    label: 'Projects'
-    label_singular: 'Project'
+    label: 'Projetos'
+    label_singular: 'Projeto'
     folder: 'assets/content/projects'
     create: true
     format: 'json'
@@ -66,11 +66,11 @@ collections:
           default: 'story',
           options: [{ label: 'Story', value: 'story' }, { label: 'Photo', value: 'photo' }],
         }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Description', name: 'description', widget: 'string', required: false }
-      - { label: 'Content', name: 'body', widget: 'markdown', required: false }
-      - { label: 'Cover Image', name: 'cover', widget: 'image', required: false, allow_multiple: false }
+      - { label: 'Data de publicação', name: 'date', widget: 'datetime' }
+      - { label: 'Titulo', name: 'title', widget: 'string' }
+      - { label: 'Descrição', name: 'description', widget: 'string', required: false }
+      - { label: 'Conteúdo', name: 'body', widget: 'markdown', required: false }
+      - { label: 'Imagem de destaque', name: 'cover', widget: 'image', required: false, allow_multiple: false }
       - {
           label: 'Gallery',
           name: 'gallery',
